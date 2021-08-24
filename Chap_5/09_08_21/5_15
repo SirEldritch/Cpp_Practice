@@ -1,0 +1,26 @@
+Code:
+a)
+    for (int ix = 0; ix != sz; ++ix){
+    }
+    if (ix != sz) {
+    }
+b)
+    int ix;
+    for (ix != sz; ++ix){
+    }
+c)
+    for (int ix = 0; ix != sz; ++sz, ++ix){   
+    }
+Fix:
+a)
+    for (int ix = 0; ix != sz; ++ix){
+    }
+    // Why don't we just use the for loop for the if condition?
+b)
+    int ix;
+    for (/*Forgot the null,semicolon*/;ix != sz; ++ix){
+    }
+c)
+    for (int ix = 0; ix != sz; ++sz, ++ix){   
+    }
+    // Code will go on forever, we need to somehow stop the loop
