@@ -1,0 +1,16 @@
+//int i = -1, &r = 0;
+// i is fine, &r must be const first to initialize and then ref
+//int *const p2 = &i2;
+// legal, pointer p2 will always point towards i2
+//const int i = -1, &r = 0;
+// Uber legal, I don't see any issues regarding this
+//const int *const p3 = &i2;
+// legal
+//const int *p1 = &i2;
+// legal, no issues with line
+//const int &const r2;
+// illegal, r2 has reference an integer and it's acting like
+// a pointer than a ref.
+//const int i2 = i, &r = i;
+// legal, assuming i was defined
+

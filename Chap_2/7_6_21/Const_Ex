@@ -1,0 +1,10 @@
+/*
+a) const int buf;
+// Illegal, must define what the integer is
+b) int cnt = 0;
+// Allowed, nothing wrong with it
+c) const int sz = cnt;
+// Allowed, cnt is copied into sz
+d) ++cnt; ++sz:
+// ++cnt is allowed, ++sz is illegal. cnt is not a const unlike sz
+*/

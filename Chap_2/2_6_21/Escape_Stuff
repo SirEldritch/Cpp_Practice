@@ -1,0 +1,5 @@
+Escape Squences
+newline         \n      horizontal tab  \t       alert(bell)    \a
+vertical tab    \v      backspace       \b       double quote   \"
+backslash       \\      question mark   \?       single quote   \'
+formfeed        \f      carriage return \r 
