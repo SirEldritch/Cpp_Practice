@@ -1,0 +1,16 @@
+vector<T>v1
+    // Vector that holds objects of type T. Default initialization
+    // v1 is empty
+vector<T>v2(v1)
+    // v2 has a copy of v1 elements
+vector<T>v2 = v1
+    // v2 has a copy of v1 elements
+vector<T>v3(n,val)
+    // v3 has n elements of value val
+vector<T>v4(n)
+    // v4 has n copies of a value-initialized object.
+vector<T>v5{a,b,c...}
+    // v5 has as many elements as there are initializers; elements
+    // are initialized by corresponding initializers
+vector<T>v1 = {a,b,c...}
+    // Equivalent to v5

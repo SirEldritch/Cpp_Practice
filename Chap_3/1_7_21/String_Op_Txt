@@ -1,0 +1,11 @@
+os << s         //Writes s onto output stream os. Returns os.
+is >> s         //Reads whitespace-seperated string from is into s. Returns is.
+getline(is,s)   //Reads a line of input from is into s. Returns is.
+s.empty         //Returns true is the string is empty, false if not.
+s.size          //Returns numbers of characters in s.
+s[n]            //Returns a reference to the char at position n in s. Positions start at 0.
+s1 + s2         //Returns a string that is the concatenation of s1 and s2.
+s1 = s2         //Replaces characters of s1 with a copy of s2.
+s1 == s2        //s1 and s2 are equal if they have the same characters.
+s1 != s2        //Equality is case-sensitive.
+<,<=,=>,>       //Comparisons are case-sensitive and use dictionary ordering.

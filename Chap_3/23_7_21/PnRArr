@@ -1,0 +1,11 @@
+int *(&arry)[10] = ptr;
+// reference to an array of pointers
+int (*arry)[10] = &ptr;
+// pointer to an array with integers
+int *arry[10] = ptr;
+// array of ten pointers to integers
+int (& arr_Ref)[10] = arr; 
+// reference to an array of integers
+
+int *beg = begin(array)
+int *end = end(array)

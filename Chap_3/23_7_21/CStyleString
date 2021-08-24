@@ -1,0 +1,10 @@
+strlen(p)       
+// Returns the length of p and ignores null from count
+strcmp(p1,p2)
+// Returns a value if p1 and p2 are equal. Returns 0 if
+// p1 == p2, a postive value if p1 > p2, a negative if
+// p1 < p2        
+strcat(p1,p2)   
+// Appends p2 to p1, Returns p1  
+strccpy(p1,p2)  
+// Copies p2 into p1, Returns p1  

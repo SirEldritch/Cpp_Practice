@@ -1,0 +1,49 @@
+*iter
+// Returns a reference to the element denoted by the iterator iter                
+iter->mem
+// Dereferences iter and fetches the member named mem from the
+// underlying element. Equivalent to (*iter).mem
+++iter
+// Increments iter to refer to the next element in the container
+--iter
+// Decrements iter to refer to the previous element in the 
+// container
+iter1 == iter2
+iter1 != iter2
+// Will compare two iterators for equality (inequality). Two
+// iterators are equal if they are denoted the same element or
+// if they are the off-the-end iterator of the same container
+
+/*
+CODE:
+string s("some thing");
+if (s.begin() != s.end()){  // make sure s is not empty
+    auto it = s.begin;      // it denotes the first char in s
+    *it = toupper(*it);     // make that character uppercase
+}
+RESULT:
+Some string
+*/
+
+// Can read and write
+vector<int>::iterator it;
+string::iterator it2;
+
+// Cannot write but read, 'const' 
+vector<int>::const_iterator it;
+string::const_iterator it2;
+
+vector<int> v;
+const vector<int> cv;
+auto it1 = v.begin();   // it1 has the type vector<int>::iterator
+auto it2 = v.begin();   // it2 has the type vector<int>::const_iterator
+
+auto it3 = v.cbegin();  // it3 has the type vector<int>::const_iterator
+// The c in .cbegin matters a lot
+
+// This dereferences and calls the member empty on the resulting object
+(*it).empty()           // Check if string that it denotes is empty
+
+//Cooler way of doing the above
+it->empty()
+            

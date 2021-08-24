@@ -1,0 +1,23 @@
+expression(string_name)
+isalnum // true if string_name is a letter or a digit
+isalpha // true if string_name is a letter
+iscntrl // true if string_name is a control character
+isdigit // true if string_name is a digit
+isgraph // true if string_name is not a space and printable
+islower // true if string_name is a lower case
+isprint // true if string_name is a printable character (
+        i.e., a space or a character that has a visible
+        presentation)
+ispunct // true if string_name is a punctuation character (
+        i.e., a character that is not a control character, 
+        a digit, a letter, or a printable whitespace) 
+isspace // true if string_name is a whitespace (i.e., a space, 
+        a tab, vertical tab, return, newline, formfeed)
+isupper // true if string_name is a upper case
+isxdigit// true if string_name is a hexadecimal digit
+tolower // If string_name is an uppercase character, it
+        will return the character as a lowercase equivalent.
+        Otherwise, it will return unchanged.
+toupper // If string_name is a lowercase character, it
+        will return the character as an uppercase equivalent.
+        Otherwise, it will return unchanged.
