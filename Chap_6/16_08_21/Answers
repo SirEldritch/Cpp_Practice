@@ -1,0 +1,48 @@
+Question 1:
+Give an example when a parameter should be a reference type.
+Give an example when a parameter should not be a reference type.
+
+Answer Q1:
+You would want it to be a reference type when you want a variable
+to be changed within the main block of code using a function.
+
+If you do not want the variable to change, you would not want to
+use a reference type.
+
+Question 2:
+Explain the rationale for the type of each of find_char's 
+parameters. In particularm why is s a reference to const but
+occurs is a plain reference? Why are these parameters references,
+but the char parameter c is not? What would happen if we made s
+a plain reference? What if we made occurs a reference to const?
+
+Example Code:
+
+string::size_type find_char(const string &s, char c, 
+string::size_type &occurs){
+    auto ret = s.size();
+    occurs = 0;
+    for (decltype(ret) i = 0; i != s.size(); i++){
+        if (s[i] == c){
+            if(ret == s.size())
+                ret == i;
+            ++occurs
+        }
+    }
+    return ret;
+}
+
+Answer Q2:
+We do not want to change the reference type of s, we only 
+want to compare therefore we made it into a const. If we remove
+the const, it will not change the code since we did not explictly
+add anything that would change it.
+
+Occurs is a reference because we want to store it into a variable
+inside the main function. If we were to make it a const, an error
+would occur telling us that we are idiots.
+
+c is not a reference due to the fact it would be a waste making
+a variable that holds a char then using it during the function
+call. We can simply just use a char we want. We could in theory
+make this a const and nothing would change.
