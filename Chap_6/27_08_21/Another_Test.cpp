@@ -12,6 +12,9 @@ int (*arryFunc(int j))[5]{
 }
 
 int main(){
-    arryFunc(3);
+    auto t = arryFunc(6);
+    for (auto &o: *t){
+        std::cout<<o<<std::endl;
+    }
     return 0;
 }
