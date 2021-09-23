@@ -1,15 +1,25 @@
+#ifndef SCREEN
+#define SCREEN
+
 #include <string>
 #include <iostream>
 #include <vector>
 
-#ifndef SCREEN
-#define SCREEN
+class Screen;
+class Window_mgr{
+    public:
+        Window_mgr();
+        using ScreenIndex= std::vector<Screen>::size_type;
+        void clear(ScreenIndex);
+    private:
+        std::vector<Screen> screens;
+};
 
 class Screen{
 public:
     typedef std::string::size_type pos;
-    friend class Window_mgr;
-    //friend void Window_mgr::clear(ScreenIndex);
+    //friend class Window_mgr;
+    friend void Window_mgr::clear(ScreenIndex);
     Screen() = default;
     Screen(pos ht, pos wd, char c) : height(ht), width(wd), contents(ht * wd,c) { }
     
@@ -64,14 +74,7 @@ inline size_t Screen::some_Function() const {
     return access_ctr;
 } 
 
-class Window_mgr{
-public:
-    using ScreenIndex = std::vector<Screen>::size_type;
-    void clear(ScreenIndex);
-
-private:
-    std::vector<Screen> screens{Screen(24,80,' ')};
-};
+Window_mgr::Window_mgr() : screens{Screen(2,5,'#')}{}
 
 void Window_mgr::clear(ScreenIndex i){
     Screen &s = screens[i];
